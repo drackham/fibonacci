@@ -1,22 +1,22 @@
-Fibonacci API
+Jarvis-MCMC API
 =============================
 
-Example project to implement a Fibonacci API microservice.
+Jarvis-MCMC is an API microservice that assists in running MCMC estimation procedures whether it be simulations or fitting models to new data.
 
 
 Getting Started
 -------------------------
-Simple instructions to get set up in development environment are provided [here](https://github.com/anonymoose/fibonacci/blob/master/fibonacci_api/docs/development.rst)
+Simple instructions to get set up in development environment are provided [here](https://github.com/drackham/fibonacci/blob/master/jarvis_mcmc_api/docs/development.rst)
 
 
 Deployment
 -------------------------
-The API is Docker-capable.  Full instructions for getting started are [here](https://github.com/anonymoose/fibonacci/blob/master/fibonacci_api/docs/deployment.rst)
+The API is Docker-capable.  Full instructions for getting started are [here](https://github.com/drackham/fibonacci/blob/master/jarvis_mcmc_api/docs/deployment.rst)
 
 
 Documentation
 -------------------------
-Documentation root for the project is provided [here](https://github.com/anonymoose/fibonacci/tree/master/fibonacci_api/docs)
+Documentation root for the project is provided [here](https://github.com/drackham/fibonacci/tree/master/jarvis_mcmc_api/docs)
 
 To build the docs into html:
 
@@ -25,15 +25,15 @@ $ cd fibonacci_api/docs
 $ make html
 ```
 
-Documentation appears in $DEV_HOME/fibonacci_api/static/index.html
+Documentation appears in $DEV_HOME/jarvis_mcmc_api/static/index.html
 
 
 Testing
 -------------------------------
 Run the tests with nosetests
 ```
-$ cd $DEV_HOME/fibonacci_api
-$ nosetests --with-coverage --cover-html --cover-package=fibonacci_api --cover-erase
+$ cd $DEV_HOME/jarvis_mcmc_api
+$ nosetests --with-coverage --cover-html --cover-package=jarvis_mcmc_api --cover-erase
 .....
 
 Name                         Stmts   Miss  Cover   Missing
@@ -53,8 +53,8 @@ Ran 5 tests in 0.027s
 Quick Start for the impatient
 ------------------------------
 ```
-$ git clone https://github.com/anonymoose/fibonacci.git
-$ cd fibonacci/fibonacci_api
+$ git clone https://github.com/drackham/jarvis-mcmc.git
+$ cd jarvis_mcmc/jarvis_mcmc_api
 $ virtualenv --no-site-packages python
 $ source python/bin/activate               # ensure you are using the correct virtualenv python
 $ pip install -r requirements.txt
@@ -64,7 +64,7 @@ $ python main.py
 Use curl to interact with the API.
 
 ```
-$ curl http://localhost:5000/fibonacci/list?count=10
+$ curl http://localhost:5000/jarvis_mcmc/list?count=10
 {
   "answer": [
     0,
