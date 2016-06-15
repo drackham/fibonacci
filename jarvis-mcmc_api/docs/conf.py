@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Fibonacci API documentation build configuration file, created by
+# Jarvis-MCMC API documentation build configuration file, created by
 # sphinx-quickstart on Mon Jan 18 16:17:21 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -47,9 +47,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Fibonacci API'
-copyright = u'2016, Ken Bedwell'
-author = u'Ken Bedwell'
+project = u'Jarvis-MCMC API'
+copyright = u'2016, Dave Rackham'
+author = u'Dave Rackham'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -201,7 +201,7 @@ html_static_path = ['.static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'FibonacciAPIdoc'
+htmlhelp_basename = 'Jarvis-MCMCAPIdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -223,8 +223,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'FibonacciAPI.tex', u'Fibonacci API Documentation',
-     u'Ken Bedwell', 'manual'),
+    (master_doc, 'Jarvis-MCMCAPI.tex', u'Jarvis MCMC API Documentation',
+     u'Dave Rackham', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -253,7 +253,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'fibonacciapi', u'Fibonacci API Documentation',
+    (master_doc, 'jarvis_mcmcapi', u'Jarvis MCMC API Documentation',
      [author], 1)
 ]
 
@@ -267,8 +267,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'FibonacciAPI', u'Fibonacci API Documentation',
-     author, 'FibonacciAPI', 'One line description of project.',
+    (master_doc, 'jarvis_mcmcAPI', u'Jarvis MCMC API Documentation',
+     author, 'jarvis_mcmcAPI', 'One line description of project.',
      'Miscellaneous'),
 ]
 

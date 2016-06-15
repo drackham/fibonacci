@@ -21,16 +21,16 @@ def log_api_call(func):
 
               -- The code
 
-              @app.route('/fibonacci/foo', methods=['GET'])
+              @app.route('/jarvis_mcmc/foo', methods=['GET'])
               @log_api_call
               def fibonacci_foo_api():
                    do something interesting...
 
               -- The client
-              curl -H "Apitrace: 1232345346" http://localhost:5000/fibonacci/foo
+              curl -H "Apitrace: 1232345346" http://localhost:5000/jarvis_mcmc/foo
 
               -- Output to logs:
-              API CALL: fibonacci_foo_api TRACE: 1232345346
+              API CALL: jarvis_mcmc_foo_api TRACE: 1232345346
     """
     def log_api_call_wrapper(*args, **kwargs):
         if 'Apitrace' in request.headers and request.headers['Apitrace'] is not None:
@@ -55,7 +55,7 @@ def notify_error(msg, status_code):
     examples:
 
     if 'count' not in request.args:
-        return notify_error("'count' argument required to /fibonacci/api", 403)
+        return notify_error("'count' argument required to /jarvis_mcmc/api", 403)
 
     """
     resp = jsonify(error=str(msg))

@@ -4,7 +4,7 @@ Deployment
 Docker Compose
 ------------------------
 
-Steps required to configure a launch a Docker container running Fibonacci API, proxied by Nginx.
+Steps required to configure a launch a Docker container running Jarvis MCMC API, proxied by Nginx.
 
 All instructions below assume successful installation of Docker consistent with your environment.
 
@@ -13,13 +13,13 @@ NOTE:  The default memory size will result in out-of-space errors.  Increase to 
 
 .. code:: console
 
-          $ docker-machine create -d virtualbox --virtualbox-memory "4096" fibonacci
+          $ docker-machine create -d virtualbox --virtualbox-memory "4096" jarvis_mcmc
 
 Set your shell to interact with the machine you just created.  The following injects relevant enviornment variables to your shell session.
 
 .. code:: console
 
-          $ eval "$(docker-machine env fibonacci)"
+          $ eval "$(docker-machine env jarvis_mcmc)"
 
 
 Combine everything described in $DEV_HOME docker-compose.yml into a running environment.
@@ -41,7 +41,7 @@ Determine the IP address for this instance.
 
 .. code:: console
 
-          $ export DOCK_IP=$(docker-machine ip fibonacci)
+          $ export DOCK_IP=$(docker-machine ip jarvis_mcmc)
           $ echo $DOCK_IP
 
 Curl to see some results from your dockerized service.
@@ -49,7 +49,7 @@ NOTE:  Nginx is expoed on port 80
 
 .. code:: console
 
-          $ curl http://$DOCK_IP/fibonacci/list?count=10
+          $ curl http://$DOCK_IP/jarvis_mcmc/list?count=10
           {
             "answer": [
               0,

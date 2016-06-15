@@ -1,10 +1,10 @@
 API
 =========================================
 
-The Fibonacci API is a REST api with one call.  All data is returned in JSON format.
+The Jarvis-MCMC API is a REST api with one call.  All data is returned in JSON format.
 
 
-/fibonacci/list
+/jarvis-mcmc/list
 ------------------------
 
 Purpose: Return a list containing the requested count of Fibonacci numbers.
@@ -21,7 +21,7 @@ Default call:
 
 .. code:: console
 
-          $ curl http://localhost:5000/fibonacci/api?count=10
+          $ curl http://localhost:5000/jarvis-mcmc/api?count=10
           {
             "answer": [
               0,
@@ -41,7 +41,7 @@ Api Traced Call
 
 .. code:: console
 
-          $ curl -H "Apitrace: 124asdfq23" http://localhost:5000/fibonacci/api?count=10
+          $ curl -H "Apitrace: 124asdfq23" http://localhost:5000/jarvis-mcmc/api?count=10
           {
             "answer": [
               0,
@@ -72,7 +72,7 @@ Example Error Output:
 
 .. code:: console
 
-           $ curl http://192.168.99.100/fibonacci/api?count=BOGUS
+           $ curl http://192.168.99.100/jarvis-mcmc/api?count=BOGUS
             {
               "error": "ERR_INVALID_TYPE:  'count' parameter must be an integer"
             }

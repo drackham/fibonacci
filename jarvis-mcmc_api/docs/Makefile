@@ -94,9 +94,9 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/FibonacciAPI.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/jarvis_mcmcAPI.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/FibonacciAPI.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/jarvis_mcmcAPI.qhc"
 
 .PHONY: applehelp
 applehelp:
@@ -113,8 +113,8 @@ devhelp:
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/FibonacciAPI"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/FibonacciAPI"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/jarvis_mcmcAPI"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/jarvis_mcmcAPI"
 	@echo "# devhelp"
 
 .PHONY: epub

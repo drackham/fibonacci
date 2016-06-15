@@ -1,5 +1,5 @@
 from common import notify_error, log_api_call
-from fibonacci import fibonacci_calc
+from jarvis_mcmc import fibonacci_calc
 from flask import Flask
 from flask import jsonify
 from flask import redirect
@@ -8,7 +8,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 
-app = Flask("FibonacciAPI")
+app = Flask("Jarvis-MCMC")
 
 HTTP_ERROR_CLIENT = 403
 HTTP_ERROR_SERVER = 500
@@ -24,11 +24,11 @@ def index():
 
 
 
-@app.route('/fibonacci/list', methods=['GET'])
+@app.route('/jarvis_mcmc/list', methods=['GET'])
 @log_api_call
-def fibonacci_list_api():
+def jarvis_mcmc_list_api():
     """
-    function:  fibonacci_api
+    function:  jarvis_mcmc_list_api
 
     params:    none
 
@@ -38,7 +38,7 @@ def fibonacci_list_api():
 
     """
     if 'count' not in request.args or request.args['count'] in ("", None):
-        return notify_error("ERR_NO_ARG:  'count' argument required to /fibonacci/api", HTTP_ERROR_CLIENT)
+        return notify_error("ERR_NO_ARG:  'count' argument required to /jarvis_mcmc/list", HTTP_ERROR_CLIENT)
 
     try:
         count = long(request.args.get('count', ''))
@@ -46,7 +46,7 @@ def fibonacci_list_api():
         return notify_error("ERR_INVALID_TYPE:  'count' parameter must be an integer", HTTP_ERROR_CLIENT)
 
     if count < 0:
-        return notify_error("ERR_OUT_OF_BOUNDS:  'count' parameger must be a postitive integer", HTTP_ERROR_CLIENT)
+        return notify_error("ERR_OUT_OF_BOUNDS:  'count' parameter must be a postitive integer", HTTP_ERROR_CLIENT)
 
     try:
         return jsonify(answer=fibonacci_calc(count))
@@ -54,10 +54,10 @@ def fibonacci_list_api():
         return notify_error(ex, HTTP_ERROR_SERVER)
 
 
-@app.route('/fibonacci/docs', methods=['GET'])
-def fibonacci_docs():
+@app.route('/jarvis_mcmc/docs', methods=['GET'])
+def jarvis_mcmc_docs():
     """
-    function:   fibonacci_docs
+    function:   jarvis_mcmc_docs
 
     params:     none
 

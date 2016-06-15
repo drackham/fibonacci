@@ -26,3 +26,8 @@ cover
 .coverage
 static
 *.pyc
+.Python
+bin/
+include/
+man/
+pip-selfcheck.json
