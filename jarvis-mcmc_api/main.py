@@ -22,10 +22,51 @@ def index():
     """
     return redirect("/static/index.html")
 
-
-
-@app.route('/jarvis_mcmc/list', methods=['GET'])
 @log_api_call
+@app.route('/jarvis_mcmc/sim/', methods=['GET'])
+def sim_no_box_api():
+    """
+    function: jarvis_mcmc_sim_api
+
+    params: none? should be box name?
+
+    returns: flask response error object indicating that a box must be specified
+
+    pre-requisites: none
+    """
+
+    return notify_error("ERR_INVALID:  The box must be specified as sim/foo-box", HTTP_ERROR_CLIENT)
+
+
+@log_api_call
+@app.route('/jarvis_mcmc/sim/<box>', methods=['GET'])
+def sim_api(box):
+    """
+    function: jarvis_mcmc_sim_api
+
+    params: none? should be box name?
+
+    returns: flask response object suitable for return to the client. May be an error or a valid successful reply.
+
+    pre-requisites: GET request requires the 'box' parameter indicating which box is requesting
+    """
+
+    # if 'box' not in request.args or request.args['box'] in ("", None):
+    #     return notify_error("ERR_NO_ARG:  'box' argument required to /jarvis_mcmc/sim", HTTP_ERROR_CLIENT)
+
+    # try:
+    #     box = request.args.get('box', '')
+    # except:
+    #     return notify_error("ERR_INVALID_TYPE:  'box' parameter must be a string", HTTP_ERROR_CLIENT)
+
+    try:
+        return jsonify(box=box, id=1, dataset="foo.RData", model="foo.model", n=1000, max_cores=4, 
+                   iter=2000, chains=4, results_path="foo/bar")
+    except Exception as ex:
+        return notify_error(ex, HTTP_ERROR_SERVER)
+
+@log_api_call
+@app.route('/jarvis_mcmc/list', methods=['GET'])
 def jarvis_mcmc_list_api():
     """
     function:  jarvis_mcmc_list_api
@@ -54,6 +95,7 @@ def jarvis_mcmc_list_api():
         return notify_error(ex, HTTP_ERROR_SERVER)
 
 
+@log_api_call
 @app.route('/jarvis_mcmc/docs', methods=['GET'])
 def jarvis_mcmc_docs():
     """
