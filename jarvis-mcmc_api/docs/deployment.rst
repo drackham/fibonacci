@@ -13,13 +13,13 @@ NOTE:  The default memory size will result in out-of-space errors.  Increase to 
 
 .. code:: console
 
-          $ docker-machine create -d virtualbox --virtualbox-memory "4096" jarvis_mcmc
+          $ docker-machine create -d virtualbox --virtualbox-memory "4096" jarvis
 
 Set your shell to interact with the machine you just created.  The following injects relevant enviornment variables to your shell session.
 
 .. code:: console
 
-          $ eval "$(docker-machine env jarvis_mcmc)"
+          $ eval "$(docker-machine env jarvis)"
 
 
 Combine everything described in $DEV_HOME docker-compose.yml into a running environment.
@@ -41,7 +41,7 @@ Determine the IP address for this instance.
 
 .. code:: console
 
-          $ export DOCK_IP=$(docker-machine ip jarvis_mcmc)
+          $ export DOCK_IP=$(docker-machine ip jarvis)
           $ echo $DOCK_IP
 
 Curl to see some results from your dockerized service.
