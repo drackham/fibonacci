@@ -6,17 +6,17 @@ Jarvis-MCMC is an API microservice that assists in running MCMC estimation proce
 
 Getting Started
 -------------------------
-Simple instructions to get set up in development environment are provided [here](https://github.com/drackham/fibonacci/blob/master/jarvis_mcmc_api/docs/development.rst)
+Simple instructions to get set up in development environment are provided [here](https://github.com/drackham/jarvis-mcmc/blob/master/jarvis_mcmc_api/docs/development.rst)
 
 
 Deployment
 -------------------------
-The API is Docker-capable.  Full instructions for getting started are [here](https://github.com/drackham/fibonacci/blob/master/jarvis_mcmc_api/docs/deployment.rst)
+The API is Docker-capable.  Full instructions for getting started are [here](https://github.com/drackham/jarvis-mcmc/blob/master/jarvis_mcmc_api/docs/deployment.rst)
 
 
 Documentation
 -------------------------
-Documentation root for the project is provided [here](https://github.com/drackham/fibonacci/tree/master/jarvis_mcmc_api/docs)
+Documentation root for the project is provided [here](https://github.com/drackham/jarvis-mcmc/tree/master/jarvis_mcmc_api/docs)
 
 To build the docs into html:
 
