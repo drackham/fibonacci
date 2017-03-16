@@ -39,20 +39,17 @@ Use Curl to pull results
 
 .. code:: console
 
-          $ curl http://localhost:5000/jarvis_mcmc/list?count=10
+          $ curl http://$DOCK_IP/jarvis_mcmc/sim/sir-thomas
           {
-            "answer": [
-              0,
-              1,
-              1,
-              2,
-              3,
-              5,
-              8,
-              13,
-              21,
-              34
-            ]
+            "box": "sir-thomas",
+            "chains": 4,
+            "dataset": "foo.RData",
+            "id": 1,
+            "iter": 2000,
+            "max_cores": 4,
+            "model": "foo.model",
+            "n": 1000,
+            "results_path": "foo/bar"
           }
 
 
